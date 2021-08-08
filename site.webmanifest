@@ -2,7 +2,7 @@
   "short_name": "Learn Genetics",
   "name": "Learn Genetics: Interactive introductory course",
   "icons": [{
-    "src": "icon.png",
+    "src": "img/icon.png",
     "type": "image/png",
     "sizes": "192x192"
   }],
