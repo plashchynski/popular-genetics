@@ -1,0 +1,6 @@
+/* Styles for the report page report.html */
+/* Scale the report images (sitemap, wireframes, etc) to have an equal width */
+#report img {
+  width: 600px;
+  height: auto;
+}
