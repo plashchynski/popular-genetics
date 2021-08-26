@@ -1,6 +1,14 @@
 /* Styles for the report page report.html */
 /* Scale the report images (sitemap, wireframes, etc) to have an equal width */
 #report img {
-  width: 600px;
+  max-width: 600px;
   height: auto;
+}
+
+/* Unordered list without bullets */
+/* Taken from: https://www.w3schools.com/howto/howto_css_list_without_bullets.asp */
+#report ul.no-bullets {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
 }
