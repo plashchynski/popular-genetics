@@ -1,52 +1,23 @@
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
+/* Dafult styles for all documents */
 
-html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
-}
+/* Import fonts from fonts.google.com service */
+@import url('https://fonts.googleapis.com/css2?family=Anaheim&family=Rubik&family=Signika+Negative&display=swap');
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
+/* CSS custom properties. Values to be reused throughout this document */
+:root {
+  --main-text-color: #5A5B5E;
+  --main-font-size: 18px;
+  --even-background-color: #F3F3F3;
+  --odd-background-color: #C4C4C4;
+  --row-height: 200px; /*for consistency, we set an equal height for all "cells" on the screen:  */
 }
 
 /*
  * Remove the gap between audio, canvas, iframes,
  * images, videos and the bottom of their containers:
  * https://github.com/h5bp/html5-boilerplate/issues/440
+ * Adapted from h5bp.org 'main.css' Online: https://github.com/h5bp/main.css
  */
-
 audio,
 canvas,
 iframe,
@@ -56,60 +27,17 @@ video {
   vertical-align: middle;
 }
 
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-  resize: vertical;
-}
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-/*
-  Structure and conventions
-
-  Row is a small area which spans the entire screen width and has a fixed height.
-  Header, footer, list items, etc. — are rows and obey this rule.
-
-  There are two kinds of rows — odd and even. The only difference is a background color.
-  Evey row could have its independent structure, columns, markup, etc.
-*/
-
-
-
-/* Import fonts from fonts.google.com service */
-@import url('https://fonts.googleapis.com/css2?family=Anaheim&family=Rubik&family=Signika+Negative&display=swap');
-
-
-/* CSS custom properties. Values to be reused throughout this document */
-:root {
-  --main-text-color: #5A5B5E;
-  --even-background-color: #F3F3F3;
-  --odd-background-color: #C4C4C4;
-  --row-height: 200px; /*for consistency, we set an equal height for all "cells" on the screen:  */
-}
-
-/* Dafult styles for all documents */
-body {
+html {
   background-color: var(--even-background-color);
   color: var(--main-text-color);
   font-family: 'Rubik', sans-serif;
-  font-size: 18px;
+  font-size: var(--main-font-size);
 }
 
+
+
 /* Styles for the report page report.html */
+
 /* Scale the report images (sitemap, wireframes, etc) to have an equal width */
 #report img {
   max-width: 600px;
@@ -124,40 +52,50 @@ body {
   margin: 0; /* Remove margins */
 }
 
+
+
+/* header styles */
+
 header {
   display: grid;
-  grid-template-columns: 3rem auto;
+  grid-template-columns: 6rem auto;
   grid-template-rows: auto;
   grid-template-areas:
   "logo name"
   "logo description";
   column-gap: 1rem;
   height: var(--row-height);
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
-/* index page styles */
 header .logo {
   grid-area: logo;
+  align-self: center;
 }
 
 header .name {
   grid-area: name;
   font-family: 'Anaheim', sans-serif;
-  font-size: 24px;
+  font-size: 3rem;
   align-self: center;
 }
 
 header .description {
   grid-area: description;
   font-family: 'Signika Negative', sans-serif;
-  font-size: 18px;
-  align-self: center;
   color: #6C6F72;
 }
 
-#card_list {
+
+
+/* home page styles */
+
+/* Reset default unordered list (ul) properties */
+ul#card_list {
   list-style-type: none;
   padding-inline-start: 0px;
+  margin-top: 0px;
 }
 
 .card {
@@ -167,9 +105,8 @@ header .description {
   grid-template-areas:
   "title picture"
   "description picture";
-  padding: 1rem 0.5rem;
   column-gap: 1rem;
-  height: var(--card-height);
+  height: var(--row-height);
 }
 
 .card:nth-child(odd) {
@@ -198,102 +135,22 @@ header .description {
   align-self: center;
 }
 
+
+/* footer styles */
+
 footer {
   display: grid;
   grid-auto-flow: column;
   justify-content: center;
   align-items: center;
   column-gap: 2rem;
-  height: var(--card-height);
+  height: var(--row-height);
   background-color: var(--odd-background-color);
 }
 
 /* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden,
-[hidden] {
-  display: none !important;
-}
-
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
-
-.sr-only {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  /* 1 */
-}
-
-/*
- * Extends the .sr-only class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
-.sr-only.focusable:active,
-.sr-only.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
-}
-
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-  visibility: hidden;
-}
-
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.clearfix::before,
-.clearfix::after {
-  content: " ";
-  display: table;
-}
-
-.clearfix::after {
-  clear: both;
-}
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
+   Media Queries for Responsive Design.
+   These styles override the primary ('mobile first') styles.
    ========================================================================== */
 
 @media only screen and (min-width: 35em) {
@@ -309,10 +166,8 @@ footer {
 
 /* ==========================================================================
    Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
+   Adapted from h5bp.org 'main.css' Online: https://github.com/h5bp/main.css
    ========================================================================== */
-
 @media print {
   *,
   *::before,
@@ -322,46 +177,6 @@ footer {
     /* Black prints faster */
     box-shadow: none !important;
     text-shadow: none !important;
-  }
-
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
-
-  pre {
-    white-space: pre-wrap !important;
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  /*
-   * Printing Tables:
-   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
-   */
-  thead {
-    display: table-header-group;
   }
 
   tr,
@@ -381,4 +196,3 @@ footer {
     page-break-after: avoid;
   }
 }
-
