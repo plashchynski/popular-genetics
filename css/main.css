@@ -156,7 +156,7 @@ ul#card_list {
 
 article > header {
   background-color: var(--odd-background-color);
-  height: var(--row-height);
+  height: calc(var(--row-height) / 2);
   display: grid;
   grid-template-columns: auto min-content;
   grid-template-rows: min-content min-content;
@@ -168,6 +168,8 @@ article > header {
 
 article > header .title {
   grid-area: title;
+  font-family: 'Signika Negative', sans-serif;
+  font-size: 1.5rem;
 }
 
 article > header .author {
