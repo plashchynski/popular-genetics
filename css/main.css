@@ -274,3 +274,11 @@ footer {
     page-break-after: avoid;
   }
 }
+
+#cell_division figure {
+  max-width: unset;
+}
+
+#cell_division img {
+  width: 100%;
+}
