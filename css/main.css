@@ -35,6 +35,11 @@ html {
   font-size: var(--main-font-size);
 }
 
+/* reset style for unvisited, visited, selected link */
+a:link, a:visited, a:hover, a:active {
+  color: var(--accent-text-colour);
+}
+
 
 
 /* Styles for the report page report.html */
@@ -134,11 +139,6 @@ ul#card_list {
   grid-area: publication_date;
 }
 
-/* reset style for unvisited, visited, selected link */
-.card .title:link, .card .title:visited, .card .title:hover, .card .title:active {
-  color: var(--accent-text-colour);
-}
-
 .card > .description {
   grid-area: description;
 }
@@ -184,8 +184,17 @@ article > section {
   padding: 1rem;
 }
 
+article figure {
+  max-width: fit-content;
+}
+
+article figcaption {
+  max-width: inherit;
+  margin-top: 1rem;
+}
+
 article img {
-  width: 100%;
+  max-width: 100%;
 }
 
 article figure {
@@ -213,7 +222,17 @@ footer {
    ========================================================================== */
 
 @media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+  body {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: min(80%, 900px);
+  }
+
+  body > header, main, footer {
+    border: 1px solid var(--accent-text-colour);
+  }
+
+
 }
 
 @media print,
