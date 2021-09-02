@@ -170,6 +170,7 @@ article > header {
   "title title"
   "author publication_date";
   padding: 1rem;
+  border-bottom: var(--default-border);
 }
 
 article > header .title {
