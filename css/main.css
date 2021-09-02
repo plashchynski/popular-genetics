@@ -1,9 +1,10 @@
-/* Dafult styles for all documents */
-
 /* Import fonts from fonts.google.com service */
 @import url('https://fonts.googleapis.com/css2?family=Anaheim&family=Rubik&family=Signika+Negative&display=swap');
 
-/* CSS custom properties. Values to be reused throughout this document */
+/* ==========================================================================
+   CSS custom properties.
+   Values to be reused throughout this document
+   ========================================================================== */
 :root {
   --accent-text-colour: #5A5B5E;
   --main-text-colour: #6C6F72;
@@ -11,56 +12,52 @@
   --even-background-color: #F3F3F3;
   --odd-background-color: #C4C4C4;
   --row-height: 200px; /*for consistency, we set an equal height for all "cells" on the screen:  */
+  --default-border: 1px solid var(--accent-text-colour);
 }
 
+
+
+/* ==========================================================================
+   Common styles for all pages
+   ========================================================================== */
 /*
  * Remove the gap between audio, canvas, iframes,
  * images, videos and the bottom of their containers:
  * https://github.com/h5bp/html5-boilerplate/issues/440
  * Adapted from h5bp.org 'main.css' Online: https://github.com/h5bp/main.css
  */
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
-}
+ audio,
+ canvas,
+ iframe,
+ img,
+ svg,
+ video {
+   vertical-align: middle;
+ }
 
-html {
-  background-color: var(--even-background-color);
-  color: var(--main-text-colour);
-  font-family: 'Rubik', sans-serif;
-  font-size: var(--main-font-size);
-}
+ html {
+   background-color: var(--even-background-color);
+   color: var(--main-text-colour);
+   font-family: 'Rubik', sans-serif;
+   font-size: var(--main-font-size);
+ }
 
-/* reset style for unvisited, visited, selected link */
-a:link, a:visited, a:hover, a:active {
-  color: var(--accent-text-colour);
-}
+ /* reset style for unvisited, visited, selected link */
+ a:link, a:visited, a:hover, a:active {
+   color: var(--accent-text-colour);
+ }
 
-
-
-/* Styles for the report page report.html */
-
-/* Scale the report images (sitemap, wireframes, etc) to have an equal width */
-#report img {
-  max-width: 600px;
-  height: auto;
-}
-
-/* Unordered list without bullets */
-/* Taken from: https://www.w3schools.com/howto/howto_css_list_without_bullets.asp */
-#report ul.no-bullets {
-  list-style-type: none; /* Remove bullets */
-  padding: 0; /* Remove padding */
-  margin: 0; /* Remove margins */
+main {
+  border-left: var(--default-border);
+  border-right: var(--default-border);
 }
 
 
 
-/* header styles */
+/* ==========================================================================
+   Header styles
+   header is the same for all pages
+   ========================================================================== */
 
 body > header {
   display: grid;
@@ -73,6 +70,7 @@ body > header {
   height: var(--row-height);
   padding-left: 1rem;
   padding-right: 1rem;
+  border: var(--default-border);
 }
 
 body > header .logo {
@@ -96,7 +94,9 @@ body > header .description {
 
 
 
-/* home page styles */
+/* ==========================================================================
+   Home page styles
+   ========================================================================== */
 
 /* Reset default unordered list (ul) properties */
 ul#card_list {
@@ -122,6 +122,10 @@ ul#card_list {
 
 .card:nth-child(odd) {
   background-color: var(--odd-background-color);
+}
+
+.card:not(:last-child) {
+  border-bottom: var(--default-border);
 }
 
 .card > .title {
@@ -152,7 +156,9 @@ ul#card_list {
 
 
 
-/* Article page content */
+/* ==========================================================================
+   styles for article pages
+   ========================================================================== */
 
 article > header {
   background-color: var(--odd-background-color);
@@ -200,11 +206,15 @@ article img {
 article figure {
   margin: 0px;
   padding: 1rem;
-  border: 1px solid var(--accent-text-colour);
+  border: var(--default-border);
 }
 
 
-/* footer styles */
+
+/* ==========================================================================
+   footer styles
+   footer are the same for all pages
+   ========================================================================== */
 
 footer {
   display: grid;
@@ -214,7 +224,10 @@ footer {
   column-gap: 2rem;
   height: var(--row-height);
   background-color: var(--odd-background-color);
+  border: var(--default-border);
 }
+
+
 
 /* ==========================================================================
    Media Queries for Responsive Design.
@@ -227,12 +240,6 @@ footer {
     justify-content: center;
     grid-template-columns: min(80%, 900px);
   }
-
-  body > header, main, footer {
-    border: 1px solid var(--accent-text-colour);
-  }
-
-
 }
 
 @media print,
@@ -281,4 +288,24 @@ footer {
 
 #cell_division img {
   width: 100%;
+}
+
+
+
+/* ==========================================================================
+   report.html styles
+   Adapted from h5bp.org 'main.css' Online: https://github.com/h5bp/main.css
+   ========================================================================== */
+
+/* Scale the report images (sitemap, wireframes, etc) to have an equal width */
+#report img {
+  max-width: 600px;
+  height: auto;
+}
+
+/* Taken from: https://www.w3schools.com/howto/howto_css_list_without_bullets.asp */
+#report ul.no-bullets {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
 }
