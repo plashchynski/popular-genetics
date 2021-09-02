@@ -5,4 +5,6 @@ window.onload = () => {
     const localDateString = new Date(originalFormat).toLocaleDateString();
     dateDiv.innerHTML = localDateString;
   });
+
+  const lightbox = GLightbox();
 };

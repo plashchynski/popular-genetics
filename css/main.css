@@ -12,7 +12,8 @@
   --even-background-color: #F3F3F3;
   --odd-background-color: #C4C4C4;
   --row-height: 200px; /*for consistency, we set an equal height for all "cells" on the screen:  */
-  --default-border: 1px solid var(--accent-text-colour);
+  --main-border: 1px solid var(--accent-text-colour);
+  --light-border: 1px solid var(--odd-background-color);
 }
 
 
@@ -48,8 +49,14 @@
  }
 
 main {
-  border-left: var(--default-border);
-  border-right: var(--default-border);
+  border-left: var(--main-border);
+  border-right: var(--main-border);
+}
+
+/* tune for glightbox to display images on light dafult background
+   since many images are transparent */
+.gslide-image {
+  background-color: var(--even-background-color);
 }
 
 
@@ -70,7 +77,7 @@ body > header {
   height: var(--row-height);
   padding-left: 1rem;
   padding-right: 1rem;
-  border: var(--default-border);
+  border: var(--main-border);
 }
 
 body > header .logo {
@@ -125,7 +132,7 @@ ul#card_list {
 }
 
 .card:not(:last-child) {
-  border-bottom: var(--default-border);
+  border-bottom: var(--main-border);
 }
 
 .card > .title {
@@ -170,7 +177,7 @@ article > header {
   "title title"
   "author publication_date";
   padding: 1rem;
-  border-bottom: var(--default-border);
+  border-bottom: var(--main-border);
 }
 
 article > header .title {
@@ -207,7 +214,7 @@ article img {
 article figure {
   margin: 0px;
   padding: 1rem;
-  border: var(--default-border);
+  border: var(--light-border);
 }
 
 
@@ -225,7 +232,7 @@ footer {
   column-gap: 2rem;
   height: var(--row-height);
   background-color: var(--odd-background-color);
-  border: var(--default-border);
+  border: var(--main-border);
 }
 
 
