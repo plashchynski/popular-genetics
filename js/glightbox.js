@@ -1347,15 +1347,15 @@
       this.initialY = null;
       this.xOffset = 0;
       this.yOffset = 0;
-      this.img.addEventListener('mousedown', function (e) {
-        return _this.dragStart(e);
-      }, false);
-      this.img.addEventListener('mouseup', function (e) {
-        return _this.dragEnd(e);
-      }, false);
-      this.img.addEventListener('mousemove', function (e) {
-        return _this.drag(e);
-      }, false);
+      // this.img.addEventListener('mousedown', function (e) {
+      //   return _this.dragStart(e);
+      // }, false);
+      // this.img.addEventListener('mouseup', function (e) {
+      //   return _this.dragEnd(e);
+      // }, false);
+      // this.img.addEventListener('mousemove', function (e) {
+      //   return _this.drag(e);
+      // }, false);
       this.img.addEventListener('click', function (e) {
         if (_this.slide.classList.contains('dragging-nav')) {
           _this.zoomOut();

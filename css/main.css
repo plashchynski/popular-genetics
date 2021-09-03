@@ -53,6 +53,22 @@ main {
   border-right: var(--main-border);
 }
 
+figure {
+  max-width: fit-content;
+  margin: 0px;
+  padding: 1rem;
+  border: var(--light-border);
+}
+
+figcaption {
+  max-width: inherit;
+  margin-top: 1rem;
+}
+
+figure img {
+  max-width: 100%;
+}
+
 /* tune for glightbox to display images on light dafult background
    since many images are transparent */
 .gslide-image {
@@ -198,26 +214,6 @@ article > section {
   padding: 1rem;
 }
 
-article figure {
-  max-width: fit-content;
-}
-
-article figcaption {
-  max-width: inherit;
-  margin-top: 1rem;
-}
-
-article img {
-  max-width: 100%;
-}
-
-article figure {
-  margin: 0px;
-  padding: 1rem;
-  border: var(--light-border);
-}
-
-
 
 /* ==========================================================================
    footer styles
@@ -316,4 +312,12 @@ footer {
   list-style-type: none; /* Remove bullets */
   padding: 0; /* Remove padding */
   margin: 0; /* Remove margins */
+}
+
+#report h1 {
+  font-family: 'Anaheim', sans-serif;
+}
+
+#report h2 {
+  font-family: 'Signika Negative', sans-serif;
 }
