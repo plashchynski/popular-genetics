@@ -131,6 +131,10 @@
 
         <!-- source: https://sketchfab.com/3d-models/covid-spike-protein-b5a39c784cc340e8929270be003018a2 -->
         <figure>
+          <!--
+            model-viewer is a third-party library for displaying 3D models in model-viewer tags.
+            More information: https://web.dev/model-viewer/
+          -->
           <model-viewer src="assets/article-2/covid-spike-protein.gltf" alt="A 3D model of COVID-19 Spike Protein" auto-rotate camera-controls ar ios-src="assets/article-2/covid-spike-protein.gltf"></model-viewer>
           <figcaption>A 3D model of COVID-19 Spike Protein</figcaption>
         </figure>
@@ -160,6 +164,10 @@
     </article>
   </main>
 
+  <!--
+    The standard footer is displayed in the bottom of every page on the website.
+    It is the same on all pages.
+  -->
   <footer>
     <a href="https://www.facebook.com/populargenetics" title="Facebook page">
       <img src="assets/facebook-logo.svg" alt="facebook logo">
@@ -174,9 +182,15 @@
     </a>
   </footer>
 
+  <!--
+    model-viewer is a third-party library for displaying 3D models in model-viewer tags.
+    More information: https://web.dev/model-viewer/
+  -->
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+  <!-- glightbox.js is a third-party library for image galleries. -->
   <script src="js/glightbox.js"></script>
+  <!-- main.js is a common file for all JS on this site -->
   <script src="js/main.js"></script>
 </body>
 
