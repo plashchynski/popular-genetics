@@ -47,8 +47,8 @@
       <p>
         I've adapted best practices listed in the <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">MDN Accessibility tutorials</a>, including:
         <ul>
-          <li>Text alternatives for visual content (alt attributes).</li>
-          <li><strong>Responsiveness.</strong> The website has both mobile and desktop versions. All articles can be printed with designated printing styles. I use relative sizes (rem) so font size can easiliy be adjasted for people with visual impairments. </li>
+          <li>Text alternatives for visual content (alt attributes) for images and 3D visualizations.</li>
+          <li><strong>Responsiveness.</strong> The website has both mobile and desktop versions. All articles can be printed with designated printing styles. I use relative units (rem) for all sizes, so font size can easiliy be adjasted for people with visual impairments. </li>
           <li><strong>Unobstructive JS.</strong>The website can be viewed on older devices without JS support. Or in case when JS was disabled due to security reasons.</li>
         </ul>
       </p>
@@ -62,7 +62,7 @@
       <p>
         <ul>
           <li>
-            It was the first time I use <a href="https://www.figma.com/">figma.com</a> to create wireframes and visual pices like the logo.
+            It was the first time I use <a href="https://www.figma.com/">figma.com</a> to create wireframes and visual pices, like the logo.
           </li>
           <li>
             For the first time I tried the Mobile-first approach. I created a mobile version first, and then adopted it for desktop.
@@ -77,7 +77,17 @@
     <section>
       <h3>What aspect(s) of your work do you think worked well and why?</h3>
       <p>
-        I think I did a good job of distinguishing between content and visual presentation. Alos, I've combined different types of visual content: static images, videos, youtube embeds, GIFs, SVGs, and even 3D models!
+        <ul>
+          <li>
+            I think I did a good job of distinguishing between content and visual presentation. I have made an extensive use of various semantic tags. I didn't polute HTML with any presentation things, like classes "red" or "blue", or "row" and "column". This is the reason why I decided not to use any CSS frameworks. Because they violate the principle of separation of functions between CSS and HTML.
+          </li>
+          <li>
+            I've combined a wide range of different visual content types: static images, videos, youtube embeds, GIFs, SVGs, and even 3D models!
+          </li>
+          <li>
+            I only used modern layout approaches: Grid and Flexbox. I have not used any legacy layout methods like tables, floating elements, etc.
+          </li>
+        </ul>
       </p>
     </section>
 
@@ -85,10 +95,15 @@
       <h3>What aspect(s) of your work could be improved, and how might you do things differently
         another time?</h3>
       <p>
-        I would like more extensive use of JavaScript. however, I couldn't think of how I can use it in an interesting and useful way within the scope of this website.
-      </p>
-      <p>
-        The design of the site is probably too minimalistic.
+        <ul>
+          <li>
+            I would like more extensive use of JavaScript. however, I couldn't think of how I can use it in an interesting and useful way within the scope of this website.
+          </li>
+
+          <li>
+            The design of the site turned out to be perhaps too minimalistic for an educational project. Probably the reason is that I did not do this project with the thought that it is a training project. I treated it like a real project. Real scientific journals are quite minimalistic and old-fashioned. For example, <a href="https://www.nature.com/">www.nature.com</a>.
+          </li>
+        </ul>
       </p>
     </section>
 
@@ -318,75 +333,77 @@
           <figcaption>Article page (Desktop)</figcaption>
         </figure>
 
-        <figure class="mock-up">
-          <a href="assets/report/mock-ups/127.0.0.1_5501_index.html(iPhone X).png" class="glightbox">
-            <img src="assets/report/mock-ups/127.0.0.1_5501_index.html(iPhone X).png" alt="Home page mock-up (Mobile)">
-          </a>
-          <figcaption>Home page mock-up (Mobile)</figcaption>
-        </figure>
+        <section id="mock-ups">
+          <figure class="mock-up">
+            <a href="assets/report/mock-ups/127.0.0.1_5501_index.html(iPhone X).png" class="glightbox">
+              <img src="assets/report/mock-ups/127.0.0.1_5501_index.html(iPhone X).png" alt="Home page mock-up (Mobile)">
+            </a>
+            <figcaption>Home page mock-up (Mobile)</figcaption>
+          </figure>
 
-        <figure class="mock-up">
-          <a href="assets/report/mock-ups/127.0.0.1_5501_article-1-dna.html(iPhone X).png" class="glightbox">
-            <img src="assets/report/mock-ups/127.0.0.1_5501_article-1-dna.html(iPhone X).png" alt="DNA Article mock-up (Mobile)">
-          </a>
-          <figcaption>DNA Article mock-up (Mobile)</figcaption>
-        </figure>
+          <figure class="mock-up">
+            <a href="assets/report/mock-ups/127.0.0.1_5501_article-1-dna.html(iPhone X).png" class="glightbox">
+              <img src="assets/report/mock-ups/127.0.0.1_5501_article-1-dna.html(iPhone X).png" alt="DNA Article mock-up (Mobile)">
+            </a>
+            <figcaption>DNA Article mock-up (Mobile)</figcaption>
+          </figure>
 
-        <figure class="mock-up">
-          <a href="assets/report/mock-ups/127.0.0.1_5501_article-2-genes.html(iPhone X).png" class="glightbox">
-            <img src="assets/report/mock-ups/127.0.0.1_5501_article-2-genes.html(iPhone X).png" alt="Genes Article mock-up (Mobile)">
-          </a>
-          <figcaption>Genes Article mock-up (Mobile)</figcaption>
-        </figure>
+          <figure class="mock-up">
+            <a href="assets/report/mock-ups/127.0.0.1_5501_article-2-genes.html(iPhone X).png" class="glightbox">
+              <img src="assets/report/mock-ups/127.0.0.1_5501_article-2-genes.html(iPhone X).png" alt="Genes Article mock-up (Mobile)">
+            </a>
+            <figcaption>Genes Article mock-up (Mobile)</figcaption>
+          </figure>
 
-        <figure class="mock-up">
-          <a href="assets/report/mock-ups/127.0.0.1_5501_article-3-mutations.html(iPhone X).png" class="glightbox">
-            <img src="assets/report/mock-ups/127.0.0.1_5501_article-3-mutations.html(iPhone X).png" alt="Mutations Article mock-up (Mobile)">
-          </a>
-          <figcaption>Mutations Article mock-up (Mobile)</figcaption>
-        </figure>
+          <figure class="mock-up">
+            <a href="assets/report/mock-ups/127.0.0.1_5501_article-3-mutations.html(iPhone X).png" class="glightbox">
+              <img src="assets/report/mock-ups/127.0.0.1_5501_article-3-mutations.html(iPhone X).png" alt="Mutations Article mock-up (Mobile)">
+            </a>
+            <figcaption>Mutations Article mock-up (Mobile)</figcaption>
+          </figure>
 
-        <figure class="mock-up">
-          <a href="assets/report/mock-ups/127.0.0.1_5501_article-4-heredity.html(iPhone X).png" class="glightbox">
-            <img src="assets/report/mock-ups/127.0.0.1_5501_article-4-heredity.html(iPhone X).png" alt="Heredity Article mock-up (Mobile)">
-          </a>
-          <figcaption>Heredity Article mock-up (Mobile)</figcaption>
-        </figure>
+          <figure class="mock-up">
+            <a href="assets/report/mock-ups/127.0.0.1_5501_article-4-heredity.html(iPhone X).png" class="glightbox">
+              <img src="assets/report/mock-ups/127.0.0.1_5501_article-4-heredity.html(iPhone X).png" alt="Heredity Article mock-up (Mobile)">
+            </a>
+            <figcaption>Heredity Article mock-up (Mobile)</figcaption>
+          </figure>
 
-        <figure class="mock-up">
-          <a href="assets/report/mock-ups/127.0.0.1_5501_index.html.png" class="glightbox">
-            <img src="assets/report/mock-ups/127.0.0.1_5501_index.html.png" alt="Home page mock-up (Desktop)">
-          </a>
-          <figcaption>Home page mock-up (Desktop)</figcaption>
-        </figure>
+          <figure class="mock-up">
+            <a href="assets/report/mock-ups/127.0.0.1_5501_index.html.png" class="glightbox">
+              <img src="assets/report/mock-ups/127.0.0.1_5501_index.html.png" alt="Home page mock-up (Desktop)">
+            </a>
+            <figcaption>Home page mock-up (Desktop)</figcaption>
+          </figure>
 
-        <figure class="mock-up">
-          <a href="assets/report/mock-ups/127.0.0.1_5501_article-1-dna.html.png" class="glightbox">
-            <img src="assets/report/mock-ups/127.0.0.1_5501_article-1-dna.html.png" alt="DNA Article mock-up (Desktop)">
-          </a>
-          <figcaption>DNA Article mock-up (Desktop)</figcaption>
-        </figure>
+          <figure class="mock-up">
+            <a href="assets/report/mock-ups/127.0.0.1_5501_article-1-dna.html.png" class="glightbox">
+              <img src="assets/report/mock-ups/127.0.0.1_5501_article-1-dna.html.png" alt="DNA Article mock-up (Desktop)">
+            </a>
+            <figcaption>DNA Article mock-up (Desktop)</figcaption>
+          </figure>
 
-        <figure class="mock-up">
-          <a href="assets/report/mock-ups/127.0.0.1_5501_article-2-genes.html.png" class="glightbox">
-            <img src="assets/report/mock-ups/127.0.0.1_5501_article-2-genes.html.png" alt="Genes Article mock-up (Desktop)">
-          </a>
-          <figcaption>Genes Article mock-up (Desktop)</figcaption>
-        </figure>
+          <figure class="mock-up">
+            <a href="assets/report/mock-ups/127.0.0.1_5501_article-2-genes.html.png" class="glightbox">
+              <img src="assets/report/mock-ups/127.0.0.1_5501_article-2-genes.html.png" alt="Genes Article mock-up (Desktop)">
+            </a>
+            <figcaption>Genes Article mock-up (Desktop)</figcaption>
+          </figure>
 
-        <figure class="mock-up">
-          <a href="assets/report/mock-ups/127.0.0.1_5501_article-3-mutations.html.png" class="glightbox">
-            <img src="assets/report/mock-ups/127.0.0.1_5501_article-3-mutations.html.png" alt="Mutations Article mock-up (Desktop)">
-          </a>
-          <figcaption>Mutations Article mock-up (Desktop)</figcaption>
-        </figure>
+          <figure class="mock-up">
+            <a href="assets/report/mock-ups/127.0.0.1_5501_article-3-mutations.html.png" class="glightbox">
+              <img src="assets/report/mock-ups/127.0.0.1_5501_article-3-mutations.html.png" alt="Mutations Article mock-up (Desktop)">
+            </a>
+            <figcaption>Mutations Article mock-up (Desktop)</figcaption>
+          </figure>
 
-        <figure class="mock-up">
-          <a href="assets/report/mock-ups/127.0.0.1_5501_article-4-heredity.html.png" class="glightbox">
-            <img src="assets/report/mock-ups/127.0.0.1_5501_article-4-heredity.html.png" alt="Heredity Article mock-up (Desktop)">
-          </a>
-          <figcaption>Heredity Article mock-up (Desktop)</figcaption>
-        </figure>
+          <figure class="mock-up">
+            <a href="assets/report/mock-ups/127.0.0.1_5501_article-4-heredity.html.png" class="glightbox">
+              <img src="assets/report/mock-ups/127.0.0.1_5501_article-4-heredity.html.png" alt="Heredity Article mock-up (Desktop)">
+            </a>
+            <figcaption>Heredity Article mock-up (Desktop)</figcaption>
+          </figure>
+        </section>
       </p>
     </section>
   </article>

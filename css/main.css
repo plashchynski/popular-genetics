@@ -356,6 +356,11 @@ footer img:hover {
   font-family: 'Signika Negative', sans-serif;
 }
 
-#report .mock-up img {
-  width: 8rem;
+#report #mock-ups {
+  margin-top: 1rem;
+  display: flex;
+}
+
+#report #mock-ups img {
+  max-width: 2rem;
 }
