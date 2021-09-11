@@ -63,6 +63,10 @@ figure img {
   max-width: 100%;
 }
 
+figure video {
+  max-width: 100%;
+}
+
 /* tune for glightbox to display images on light dafult background
    since many images are transparent */
 .gslide-image {
