@@ -59,13 +59,15 @@ figcaption {
   margin-top: 1rem;
 }
 
-figure img {
+figure img,video {
   max-width: 100%;
 }
 
-figure video {
-  max-width: 100%;
+figure iframe {
+  width: 100% !important;
+  height: auto !important;
 }
+
 
 /* tune for glightbox to display images on light dafult background
    since many images are transparent */
@@ -280,6 +282,11 @@ footer img:hover {
   .article_item {
     padding-bottom: 2rem;
     margin-bottom: 1rem;
+  }
+
+  figure iframe {
+    min-width: 560px !important;
+    min-height: 315px !important;
   }
 }
 
