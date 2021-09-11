@@ -284,7 +284,7 @@ footer img:hover {
     margin-bottom: 1rem;
   }
 
-  figure iframe {
+  figure iframe,figure model-viewer {
     min-width: 560px !important;
     min-height: 315px !important;
   }
