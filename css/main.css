@@ -129,16 +129,16 @@ body > header .description {
 /* ==========================================================================
    Home page styles
    ========================================================================== */
-
-/* Reset default unordered list (ul) properties */
-ul#card_list {
+/* Reset default unordered list (ul) properties for the artcile list */
+ul#article_list {
   list-style-type: none;
   padding-inline-start: 0px;
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
-.card {
+/* An item for an individual article in the artcile list */
+.article_item {
   display: grid;
   grid-template-columns: auto min-content min-content;
   grid-template-rows: min-content auto min-content;
@@ -150,31 +150,31 @@ ul#card_list {
   padding: 1rem;
 }
 
-.card:not(:last-child) {
+.article_item:not(:last-child) {
   border-bottom: var(--main-border);
 }
 
-.card > .title {
+.article_item > .title {
   grid-area: title;
   font-family: 'Signika Negative', sans-serif;
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
-.card > .author {
+.article_item > .author {
   grid-area: author;
 }
 
-.card > .publication_date {
+.article_item > .publication_date {
   grid-area: publication_date;
 }
 
-.card > .description {
+.article_item > .description {
   grid-area: description;
   margin-bottom: 1rem;
 }
 
-.card > .picture {
+.article_item > .picture {
   grid-area: picture;
   align-self: center;
   height: auto;
@@ -184,9 +184,8 @@ ul#card_list {
 
 
 /* ==========================================================================
-   styles for article pages
+   Styles for an article page
    ========================================================================== */
-
 article > header {
   background-color: var(--odd-background-color);
   display: grid;
