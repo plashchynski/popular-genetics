@@ -247,6 +247,7 @@ footer {
 
   body > header {
     margin-top: 1rem;
+    margin-bottom: 2rem;
   }
 
   article > section {
@@ -257,6 +258,11 @@ footer {
     margin-top: 1rem;
     padding-bottom: 2rem;
     margin-bottom: 2rem;
+  }
+
+  .article_item {
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 }
 
