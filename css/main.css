@@ -26,26 +26,26 @@
  * https://github.com/h5bp/html5-boilerplate/issues/440
  * Adapted from h5bp.org 'main.css' Online: https://github.com/h5bp/main.css
  */
- audio,
- canvas,
- iframe,
- img,
- svg,
- video {
-   vertical-align: middle;
- }
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
 
- html {
-   background-color: var(--even-background-color);
-   color: var(--main-text-colour);
-   font-family: 'Rubik', sans-serif;
-   font-size: var(--main-font-size);
- }
+html {
+  background-color: var(--even-background-color);
+  color: var(--main-text-colour);
+  font-family: 'Rubik', sans-serif;
+  font-size: var(--main-font-size);
+}
 
- /* reset style for unvisited, visited, selected link */
- a:link, a:visited, a:hover, a:active {
-   color: var(--accent-text-colour);
- }
+/* reset style for unvisited, visited, selected link */
+a:link, a:visited, a:hover, a:active {
+  color: var(--accent-text-colour);
+}
 
 figure {
   max-width: fit-content;
@@ -359,8 +359,9 @@ footer img:hover {
 #report #mock-ups {
   margin-top: 1rem;
   display: flex;
+  flex-wrap: wrap;
 }
 
 #report #mock-ups img {
-  max-width: 2rem;
+  max-width: 10rem;
 }
