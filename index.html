@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>Popular Genetics Magazine</title>
   <meta name="description" content="Popular Mechanics is a magazine of popular science, featuring genetics, genomics, and bioinformatics topics.">
+  <!-- mobile-optimized, sets size of the viewport to width of the screen in CSS pixels at a scale of 100%. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!--
@@ -44,17 +45,21 @@
     Unlike header and footer, which remain the same.
    -->
   <main>
+    <!-- This is the list of articles that occupies the all main part of the home page -->
     <ul id="article_list">
+      <!-- article_item is a card of an individual article, contains title, author, publication_date, etc. -->
       <li class="article_item">
         <a class="title" href="article-1-dna.html">What is DNA?</a>
         <div class="description">
           In this article you will learn about cells and about the main features of the most important molecule in every living cell.
         </div>
         <div class="author">D.Plashc</div>
+        <!-- The date string is updated by JS during the page load to be displayed in the local format -->
         <div class="publication_date">2021-08-19</div>
         <img class="picture" src="assets/article-1/title.png" alt="Ornamental icon depicting DNA structure">
       </li>
 
+      <!-- The structure is the same for all following items: -->
       <li class="article_item">
         <a class="title" href="article-2-genes.html">Genes and proteins</a>
         <div class="description">

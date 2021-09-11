@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>Popular Genetics Magazine: Heredity</title>
   <meta name="description" content="What is the biological process responsible for passing on physical traits from one generation to another.">
+  <!-- mobile-optimized, sets size of the viewport to width of the screen in CSS pixels at a scale of 100%. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!--
@@ -47,12 +48,18 @@
    -->
   <main>
     <article>
+      <!--
+        This is the header area of the article displayed as a darker block on the top of the page.
+        The structure is the same for every article.
+       -->
       <header>
         <h1 class="title">About heredity</h1>
         <div class="author">D.Plashc</div>
+        <!-- The date string is updated by JS during the page load to be displayed in the local format -->
         <div class="publication_date">2021-08-19</div>
       </header>
 
+      <!-- Every article consists of sections which divide it into small topics -->
       <section id="reproduction">
         <h2>Reproduction</h2>
         <!--
@@ -62,6 +69,7 @@
           https://en.wikipedia.org/wiki/Asexual_reproduction
           https://en.wikipedia.org/wiki/Sexual_reproduction
         -->
+        <!-- dfn tag is used when a new term introduced -->
         <p>
           <dfn>Heredity</dfn> (or inheritance) is the passing of traits (characteristics) from parents to offspring. Through heredity, variations between individuals can accumulate and cause species to evolve by <dfn>natural selection</dfn>. Heredity happens as a result of a process called <dfn>reproduction</dfn>. Reproduction could be asexual or sexual.
         </p>
@@ -75,7 +83,7 @@
         </p>
 
         <p>
-          Organisms that reproduce through asexual reproduction tend to grow in number exponentially. However, because they rely on mutation for variations in their DNA, all members of the species have similar vulnerabilities. Organisms that reproduce sexually yield a smaller number of offspring, but the large amount of variation in their genes makes them less susceptible to disease.
+          Organisms that reproduce through asexual reproduction tend to grow in number exponentially. However, because they rely on mutation for variations in their <abbr title="Deoxyribonucleic acid">DNA</abbr>, all members of the species have similar vulnerabilities. Organisms that reproduce sexually yield a smaller number of offspring, but the large amount of variation in their genes makes them less susceptible to disease.
         </p>
       </section>
 
@@ -94,6 +102,7 @@
           <dfn>Mitosis</dfn>: each daughter cell is genetically identical to the parent cell. This type of cell division is involved in asexual reproduction and in ordinary lifecycle of organisms.
         </p>
 
+        <!-- All visuals are enclosed in a figure tage with figcaption -->
         <figure>
           <a href="assets/article-4/mitosis.svg" class="glightbox">
             <img src="assets/article-4/mitosis.svg" alt="Visualisation of the different stages of mitosis">

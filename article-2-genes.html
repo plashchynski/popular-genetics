@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>Popular Genetics Magazine: Genes</title>
   <meta name="description" content="What are genes and why are they important? Learn about proteins — the building block of every living cell.">
+  <!-- mobile-optimized, sets size of the viewport to width of the screen in CSS pixels at a scale of 100%. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!--
@@ -47,12 +48,18 @@
    -->
   <main>
     <article>
+      <!--
+        This is the header area of the article displayed as a darker block on the top of the page.
+        The structure is the same for every article.
+       -->
       <header>
         <h1 class="title">Genes and proteins</h1>
         <div class="author">D.Plashc</div>
+        <!-- The date string is updated by JS during the page load to be displayed in the local format -->
         <div class="publication_date">2021-08-21</div>
       </header>
 
+      <!-- Every article consists of sections which divide it into small topics -->
       <section id="genes">
         <!--
           Sources:
@@ -76,10 +83,12 @@
         -->
         <h2>RNA</h2>
 
+        <!-- dfn tag is used when a new term introduced -->
         <p>
           <dfn>Ribonucleic acid (RNA)</dfn> is a complex molecule essential in various biological roles in coding, decoding, regulation and expression of genes.
         </p>
 
+        <!-- abbr tag is used to mark abbreviations -->
         <p>
           <abbr title="Ribonucleic acid">RNA</abbr> is physically different from <abbr title="Deoxyribonucleic acid">DNA</abbr>: <abbr title="Deoxyribonucleic acid">DNA</abbr> contains two intercoiled strands, but <abbr title="Ribonucleic acid">RNA</abbr> only contains one single strand. <abbr title="Ribonucleic acid">RNA</abbr> also contains different bases from <abbr title="Deoxyribonucleic acid">DNA</abbr>. These bases are the following:
         </p>
@@ -95,6 +104,7 @@
           Adenine forms bonds with uracil, and guanine forms bonds with cytosine. In this way, we say that adenine is complementary to uracil and that guanine is complementary to cytosine. The first three bases are also found in <abbr title="Deoxyribonucleic acid">DNA</abbr>, but uracil replaces thymine as a complement to adenine.
         </p>
 
+        <!-- All visuals are enclosed in a figure tage with figcaption -->
         <figure>
           <a href="assets/article-2/Difference_DNA_RNA-EN.svg" class="glightbox">
             <img src="assets/article-2/Difference_DNA_RNA-EN.svg" alt="A diagrammatic comparison of RNA with DNA, showing the helices and nucleobases each employs">

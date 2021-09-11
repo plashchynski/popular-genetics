@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>Popular Genetics Magazine: Mutations</title>
   <meta name="description" content="Mutations are not only bad things. Lern about the engine of evolution that produce all diversity of live.">
+  <!-- mobile-optimized, sets size of the viewport to width of the screen in CSS pixels at a scale of 100%. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!--
@@ -47,12 +48,18 @@
    -->
   <main>
     <article>
+      <!--
+        This is the header area of the article displayed as a darker block on the top of the page.
+        The structure is the same for every article.
+       -->
       <header>
         <h1 class="title">Mutations</h1>
         <div class="author">D.Plashc</div>
+        <!-- The date string is updated by JS during the page load to be displayed in the local format -->
         <div class="publication_date">2021-09-05</div>
       </header>
 
+      <!-- Every article consists of sections which divide it into small topics -->
       <section id="replication">
         <!--
           Sources:
@@ -60,19 +67,21 @@
           https://simple.wikipedia.org/wiki/DNA_replication
         -->
         <h2>DNA replication</h2>
+        <!-- dfn tag is used when a new term introduced -->
         <p>
-          When DNA is copied, this is called <dfn>DNA replication</dfn>. Briefly, the hydrogen bonds holding together paired bases are broken and the molecule is split in half: the legs of the ladder are separated. This gives two single strands. New strands are formed by matching the bases (<abbr title="Adenine">A</abbr> with <abbr title="Thymine">T</abbr> and <abbr title="Guanine">G</abbr> with <abbr title="Cytosine">C</abbr>) to make the missing strands.
+          When <abbr title="Deoxyribonucleic acid">DNA</abbr> is copied, this is called <dfn>DNA replication</dfn>. Briefly, the hydrogen bonds holding together paired bases are broken and the molecule is split in half: the legs of the ladder are separated. This gives two single strands. New strands are formed by matching the bases (<abbr title="Adenine">A</abbr> with <abbr title="Thymine">T</abbr> and <abbr title="Guanine">G</abbr> with <abbr title="Cytosine">C</abbr>) to make the missing strands.
         </p>
 
         <p>
-          First, an enzyme called <dfn>DNA helicase</dfn> splits the DNA down the middle by breaking the hydrogen bonds. Then after the DNA molecule is in two separate pieces, another molecule called <dfn>DNA polymerase</dfn> makes a new strand that matches each of the strands of the split DNA molecule. Each copy of a DNA molecule is made of half of the original (starting) molecule and half of new bases.
+          First, an enzyme called <dfn>DNA helicase</dfn> splits the <abbr title="Deoxyribonucleic acid">DNA</abbr> down the middle by breaking the hydrogen bonds. Then after the <abbr title="Deoxyribonucleic acid">DNA</abbr> molecule is in two separate pieces, another molecule called <dfn>DNA polymerase</dfn> makes a new strand that matches each of the strands of the split <abbr title="Deoxyribonucleic acid">DNA</abbr> molecule. Each copy of a <abbr title="Deoxyribonucleic acid">DNA</abbr> molecule is made of half of the original (starting) molecule and half of new bases.
         </p>
 
+        <!-- All visuals are enclosed in a figure tage with figcaption -->
         <figure>
           <a href="assets/article-3/DNA_replication_split.svg" class="glightbox">
             <img src="assets/article-3/DNA_replication_split.svg" alt="DNA replication split visualization">
           </a>
-          <figcaption>DNA being copied</figcaption>
+          <figcaption><abbr title="Deoxyribonucleic acid">DNA</abbr> being copied</figcaption>
         </figure>
       </section>
 
@@ -86,7 +95,7 @@
       <section id="mutations">
         <h2>Mutations</h2>
         <p>
-          During the process of DNA replication, errors sometimes occur. These errors, called <dfn>mutations</dfn>. There are four main types of mutations:
+          During the process of <abbr title="Deoxyribonucleic acid">DNA</abbr> replication, errors sometimes occur. These errors, called <dfn>mutations</dfn>. There are four main types of mutations:
         </p>
 
         <ul>
@@ -103,10 +112,10 @@
           <figcaption>Types of mutations</figcaption>
         </figure>
         <p>
-          Error rates are usually very low—1 error in every 10–100 million bases—due to the "proofreading" ability of DNA polymerases. Mutations may be bad for the organism, or neutral, or of benefit. Sometimes mutations are fatal for the organism – the protein made by the new DNA does not work at all, and this causes the embryo to die. On the other hand, evolution is moved forward by mutations, when the new version of the protein works better for the organism.
+          Error rates are usually very low—1 error in every 10–100 million bases—due to the "proofreading" ability of <abbr title="Deoxyribonucleic acid">DNA</abbr> polymerases. Mutations may be bad for the organism, or neutral, or of benefit. Sometimes mutations are fatal for the organism – the protein made by the new <abbr title="Deoxyribonucleic acid">DNA</abbr> does not work at all, and this causes the embryo to die. On the other hand, evolution is moved forward by mutations, when the new version of the protein works better for the organism.
         </p>
         <p>
-          Processes that increase the rate of changes in DNA are called <dfn>mutagenic</dfn>. Mutagenic chemicals increase errors in DNA replication, often by interfering with the structure of base-pairing, while UV radiation induces mutations by causing damage to the DNA structure. Chemical damage to DNA occurs naturally as well, and cells use DNA repair mechanisms to repair mismatches and breaks in DNA—nevertheless, the repair sometimes fails to return the DNA to its original sequence.
+          Processes that increase the rate of changes in <abbr title="Deoxyribonucleic acid">DNA</abbr> are called <dfn>mutagenic</dfn>. Mutagenic chemicals increase errors in <abbr title="Deoxyribonucleic acid">DNA</abbr> replication, often by interfering with the structure of base-pairing, while UV radiation induces mutations by causing damage to the <abbr title="Deoxyribonucleic acid">DNA</abbr> structure. Chemical damage to <abbr title="Deoxyribonucleic acid">DNA</abbr> occurs naturally as well, and cells use <abbr title="Deoxyribonucleic acid">DNA</abbr> repair mechanisms to repair mismatches and breaks in DNA—nevertheless, the repair sometimes fails to return the <abbr title="Deoxyribonucleic acid">DNA</abbr> to its original sequence.
         </p>
       </section>
 

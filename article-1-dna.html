@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>Popular Genetics Magazine: DNA</title>
   <meta name="description" content="In this article you will learn about cells and about the main features of the most important molecule in every living cell.">
+  <!-- mobile-optimized, sets size of the viewport to width of the screen in CSS pixels at a scale of 100%. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!--
@@ -48,12 +49,18 @@
    -->
   <main>
     <article>
+      <!--
+        This is the header area of the article displayed as a darker block on the top of the page.
+        The structure is the same for every article.
+       -->
       <header>
         <h1 class="title">What is DNA?</h1>
         <div class="author">D.Plashc</div>
+        <!-- The date string is updated by JS during the page load to be displayed in the local format -->
         <div class="publication_date">2021-08-19</div>
       </header>
 
+      <!-- Every article consists of sections which divide it into small topics -->
       <section id="cells">
         <!--
           Sources:
@@ -61,10 +68,12 @@
           https://simple.wikipedia.org/wiki/Genetics
         -->
         <h2>Cells</h2>
+        <!-- dfn tag is used when a new term introduced -->
         <p>
           All living things are made of millions of tiny self-contained components called cells. The <dfn>cell</dfn> is the basic structure of organisms. There are organisms made up of only one cell, like a bacteria or <a href="https://simple.wikipedia.org/wiki/Protist">protist</a>. Such cell do everything that the organism needs to live: eat, get rid of waste, grow, reproduce. Some of them can even move and sense their environment.
         </p>
 
+        <!-- All visuals are enclosed in a figure tage with figcaption -->
         <figure>
           <a href="assets/article-1/e-coli.jpg" class="glightbox">
             <img src="assets/article-1/e-coli.jpg" alt="A microscope photography of Escherichia coli (E. coli) bacteria">
@@ -91,6 +100,7 @@
           https://www.ncbi.nlm.nih.gov/books/NBK26821/
         -->
         <h2>DNA</h2>
+        <!-- abbr tag is used to mark abbreviations -->
         <p>
           Inside of each cell are long and complex molecules called <dfn>DNA</dfn> (deoxyribonucleic acid). Due to its special structure, this molecule is able to store information. Recently scientists learned how to read and decode this information. It turned out that most of characteristic of the living thing are encoded in <abbr title="Deoxyribonucleic acid">DNA</abbr>. Whether you have red hair or brown eyes, are tall or have freckles, these and many other unique traits are encoded in your <abbr title="Deoxyribonucleic acid">DNA</abbr>.
         </p>
