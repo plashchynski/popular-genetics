@@ -7,11 +7,17 @@
   <meta name="description" content="Mutations are not only bad things. Lern about the engine of evolution that produce all diversity of live.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!--
+    Normalize.css is a third-party library that makes browsers render all elements more
+    consistently and in line with modern standards.
+  -->
   <link rel="stylesheet" href="css/normalize.css">
+  <!-- glightbox.css is a stylesheet used by a third-party library glightbox.js -->
   <link rel="stylesheet" href="css/glightbox.css">
+  <!-- main.css is a common file for all styles on this site -->
   <link rel="stylesheet" href="css/main.css">
 
-  <!-- 
+  <!--
     The theme-color value sets a suggested color that user agents should use to customize
     the display of the page or of the surrounding user interface for mobile devices
     https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color
@@ -20,16 +26,25 @@
 </head>
 
 <body>
+  <!--
+    The standard header is displayed on top of every page on the website.
+    The only difference is that on the home page the title and subtitle are H1 and H2.
+    On the article pages they are regular DIVs since H1 is used for the article title.
+  -->
   <header>
     <a href="/index.html" class="logo">
       <img src="assets/icon.svg" alt="Popular genetics magazine logo depicting double helix">
     </a>
     <div>
       <div class="title">Popular Genetics</div>
-      <div class="description">A life science magazine</div>
+      <div class="subtitle">A life science magazine</div>
     </div>
   </header>
 
+  <!--
+    The main content area consists of content that is unique among the pages on the website.
+    Unlike header and footer, which remain the same.
+   -->
   <main>
     <article>
       <header>
@@ -102,7 +117,7 @@
           Induced mutations are alterations in the gene after it has come in contact with mutagens and environmental causes. Induced mutations on the molecular level can be caused by chemicals and radiation.
         </p>
 
-        
+
         <figure>
           <a href="assets/article-3/Benzopyrene_DNA_adduct.png" class="glightbox">
             <img src="assets/article-3/Benzopyrene_DNA_adduct.png" alt="A visualization of covalent adduct between the metabolite of benzopyrene, the major mutagen in tobacco smoke.">
