@@ -231,6 +231,19 @@ footer {
   margin: 4rem 0;
 }
 
+/* Animation: icons in the footer make a flip when hovered with a mouse */
+footer img:hover {
+  animation: flip 1s;
+}
+
+@keyframes flip {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
 
 
 /* ==========================================================================
