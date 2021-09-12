@@ -9,8 +9,8 @@ window.onload = () => {
   // glightbox.js is a third-party library for image galleries.
   const lightbox = GLightbox();
 
-  // Read Dark Mode settings from the operating system level and apply it
-  function applyDarkSchemeSettings() {
+  // Read color scheme preferences from the operating system level and apply it
+  function applyColorSchemePrefers() {
     const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
     if (prefersDarkScheme.matches) {
       document.body.classList.add("dark-theme");
@@ -19,10 +19,13 @@ window.onload = () => {
     }
   }
 
-  // Add an event listener for operating system color scheme setting update
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyDarkSchemeSettings);
-  applyDarkSchemeSettings();
+  // Add an event listener for operating system color scheme preferences update
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyColorSchemePrefers);
 
+  // apply color scheme preferences initially during page load
+  applyColorSchemePrefers();
+
+  // manually change the color scheme by clicking on the toggle
   const darkModeToggle = document.querySelector("#darkModeToggle");
   darkModeToggle.addEventListener('click', function(e) {
     document.body.classList.toggle('dark-theme');
