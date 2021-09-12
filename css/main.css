@@ -263,8 +263,7 @@ article > section {
    ========================================================================== */
 
 footer {
-  display: grid;
-  grid-auto-flow: column;
+  display: flex;
   justify-content: center;
   align-items: center;
   column-gap: 2rem;
