@@ -170,6 +170,10 @@ body > header .subtitle {
   mask-image: url("../assets/sun.svg");
 }
 
+.dark-theme article > header {
+  background-color: var(--accent-text-colour);
+}
+
 /* ==========================================================================
    Home page styles
    ========================================================================== */
