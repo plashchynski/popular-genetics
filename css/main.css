@@ -278,8 +278,8 @@ article > header .publication_date {
 
 article > section {
   padding: 1rem;
+  line-height: 1.4;
 }
-
 
 /* ==========================================================================
    footer styles
