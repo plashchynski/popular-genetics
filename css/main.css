@@ -106,7 +106,7 @@ body.dark-theme {
 
 /* ==========================================================================
    Header styles
-   header placed on the top of each page, contains logo, title, subtitle, and 
+   header placed on the top of each page, contains logo, title, subtitle, and
    ========================================================================== */
 body > header {
   display: grid;
