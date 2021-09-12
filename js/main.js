@@ -6,5 +6,11 @@ window.onload = () => {
     dateDiv.innerHTML = localDateString;
   });
 
+  // glightbox.js is a third-party library for image galleries.
   const lightbox = GLightbox();
+
+  const darkModeToggle = document.querySelector("#darkModeToggle");
+  darkModeToggle.addEventListener('click', function(e) {
+    document.body.classList.toggle('dark-theme');
+  });
 };

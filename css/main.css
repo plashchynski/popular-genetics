@@ -14,7 +14,6 @@
 }
 
 
-
 /* ==========================================================================
    Common styles for all pages
    ========================================================================== */
@@ -34,7 +33,7 @@ video {
 }
 
 /* global styles for all documents */
-html {
+body {
   background-color: var(--even-background-color);
   color: var(--default-text-colour);
   font-family: 'Rubik', sans-serif;
@@ -84,6 +83,15 @@ ul.no-bullets {
   margin: 0; /* Remove margins */
 }
 
+/* dark-theme styles */
+body.dark-theme {
+  background-color: var(--default-text-colour);
+  color: var(--even-background-color);
+}
+
+.dark-theme a:link,.dark-theme a:visited,.dark-theme a:hover,.dark-theme a:active {
+  color: var(--odd-background-color);
+}
 
 
 /* ==========================================================================
@@ -111,8 +119,7 @@ body > header .title {
   font-size: 2.3rem;
   font-weight: bold;
 
-  color: var(--accent-text-colour);
-
+  /* Overwrite default H1 styles */
   margin: 0.2rem 0;
   margin-block-start: 0.67em;
   margin-block-end: 0.67em;
@@ -126,12 +133,20 @@ body > header .subtitle {
   font-size: 1rem;
   font-weight: bold;
 
-  color: var(--default-text-colour);
-
+  /* Overwrite default H2 styles */
   margin-block-start: 0.83em;
   margin-block-end: 0.83em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+}
+
+#darkModeToggle {
+  height: 1rem;
+  width: 3rem;
+  background: var(--accent-text-colour);
+  border-radius: 40px;
+  padding: 12px;
+  cursor: pointer;
 }
 
 /* ==========================================================================
@@ -200,11 +215,11 @@ ul#article_list {
 article > header {
   background-color: var(--odd-background-color);
   display: grid;
-  grid-template-columns: auto min-content;
+  grid-template-columns: auto min-content max-content;
   grid-template-rows: min-content min-content;
   grid-template-areas:
-  "title title"
-  "author publication_date";
+  "title title toggle"
+  "author publication_date toggle";
   padding: 1rem;
   padding-bottom: 2rem;
 }
