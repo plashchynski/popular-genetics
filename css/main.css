@@ -151,15 +151,23 @@ body > header .subtitle {
 #darkModeToggle {
   margin-top: 2rem;
   margin-right: 1rem;
+  height: 32px;
+  width: 32px;
   align-self: start;
   justify-self: end;
   grid-area: toggle;
-  height: 1rem;
-  width: 3rem;
-  background: var(--accent-text-colour);
-  border-radius: 40px;
-  padding: 12px;
+  background-color: var(--accent-text-colour);
+  -webkit-mask-image: url("../assets/moon.svg");
+  mask-image: url("../assets/moon.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
   cursor: pointer;
+}
+
+.dark-theme #darkModeToggle {
+  background-color: var(--odd-background-color);
+  -webkit-mask-image: url("../assets/sun.svg");
+  mask-image: url("../assets/sun.svg");
 }
 
 /* ==========================================================================
