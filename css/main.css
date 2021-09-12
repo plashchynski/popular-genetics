@@ -93,6 +93,10 @@ body.dark-theme {
   color: var(--odd-background-color);
 }
 
+.dark-theme .logo img {
+  content: url("../assets/icon_dark.svg");
+}
+
 
 /* ==========================================================================
    Header styles
