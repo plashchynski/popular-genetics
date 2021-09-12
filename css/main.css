@@ -45,6 +45,7 @@ a:link, a:visited, a:hover, a:active {
   color: var(--accent-text-colour);
 }
 
+/* All visuals are enclosed in a figure tage with figcaption */
 figure {
   max-width: fit-content;
   margin: 0px;
@@ -83,16 +84,21 @@ ul.no-bullets {
   margin: 0; /* Remove margins */
 }
 
-/* dark-theme styles */
+/* ==========================================================================
+   Dark theme used for the dark color mode (see main.js)
+   ========================================================================== */
+/* For the dark theme we swap text and backgroud colours */
 body.dark-theme {
   background-color: var(--default-text-colour);
   color: var(--even-background-color);
 }
 
+/* All kind of links */
 .dark-theme a:link,.dark-theme a:visited,.dark-theme a:hover,.dark-theme a:active {
   color: var(--odd-background-color);
 }
 
+/* Replace the website logo with a darker version */
 .dark-theme .logo img {
   content: url("../assets/icon_dark.svg");
 }
@@ -100,9 +106,8 @@ body.dark-theme {
 
 /* ==========================================================================
    Header styles
-   header is the same for all pages
+   header placed on the top of each page, contains logo, title, subtitle, and 
    ========================================================================== */
-
 body > header {
   display: grid;
   grid-template-columns: 6rem auto;
@@ -118,12 +123,14 @@ body > header {
   margin-bottom: 1rem;
 }
 
+/* The main website logo on the top of each page next to the title */
 body > header .logo img {
   grid-area: logo;
   width: 6rem;
   height: 100%;
 }
 
+/* The main website title on the top of each page "Popular Genetics" */
 body > header .title {
   grid-area: title;
   font-family: 'Anaheim', sans-serif;
@@ -136,9 +143,9 @@ body > header .title {
   margin-block-end: 0.67em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-
 }
 
+/* A subtile on the top of each page "A life science magazine" */
 body > header .subtitle {
   grid-area: subtitle;
   font-family: 'Signika Negative', sans-serif;
@@ -152,6 +159,7 @@ body > header .subtitle {
   margin-inline-end: 0px;
 }
 
+/* This a color mode switch button */
 #darkModeToggle {
   margin-top: 2rem;
   margin-right: 1rem;
@@ -277,7 +285,6 @@ article > section {
    footer styles
    footer are the same for all pages
    ========================================================================== */
-
 footer {
   display: flex;
   justify-content: center;
