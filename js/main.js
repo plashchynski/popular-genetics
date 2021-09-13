@@ -1,4 +1,4 @@
-window.onload = () => {
+window.addEventListener('load', () => {
   // convert all dates to local date format
   document.querySelectorAll(".publication_date").forEach((dateDiv) => {
     const originalFormat = dateDiv.innerHTML;
@@ -59,4 +59,4 @@ window.onload = () => {
     const shareButtons = document.querySelectorAll('.share_button');
     shareButtons.forEach((button) => activateShareButton(button));
   }
-};
+});
