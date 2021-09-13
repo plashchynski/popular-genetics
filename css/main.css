@@ -252,10 +252,10 @@ ul#article_list {
 article > header {
   background-color: var(--odd-background-color);
   display: grid;
-  grid-template-columns: auto min-content max-content;
+  grid-template-columns: auto min-content;
   grid-template-rows: min-content min-content;
   grid-template-areas:
-  "title title"
+  "title share_button"
   "author publication_date";
   padding: 1rem;
   padding-bottom: 2rem;
@@ -274,6 +274,21 @@ article > header .author {
 article > header .publication_date {
   grid-area: publication_date;
   white-space: nowrap;
+
+}
+
+article .share_button {
+  grid-area: share_button;
+  background-color: var(--accent-text-colour);
+  -webkit-mask-image: url("../assets/share.svg");
+  mask-image: url("../assets/share.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+  justify-self: end;
+  margin-top: 0.5rem;
 }
 
 article > section {

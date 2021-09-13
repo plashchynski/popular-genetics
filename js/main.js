@@ -30,4 +30,33 @@ window.onload = () => {
   darkModeToggle.addEventListener('click', function(e) {
     document.body.classList.toggle('dark-theme');
   });
+
+  // This function enables share button functionality provided by some browsers, mainly on mobile platforms
+  // More information: https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share
+  function activateShareButton(button) {
+    button.style.display = 'block';
+
+    // Share must be triggered by "user activation"
+    button.addEventListener('click', async () => {
+      try {
+        const pageDescription = document.getElementsByName('description')[0].getAttribute('content');
+        await navigator.share({
+          title: document.title,
+          text: pageDescription,
+          url: window.location.href,
+        });
+      } catch(error) {
+        if (error.name == "AbortError")
+          return;
+
+        alert(error);
+      }
+    });
+  }
+
+  // activate share buttons if share functionality is available in the browser
+  if (navigator.canShare) {
+    const shareButtons = document.querySelectorAll('.share_button');
+    shareButtons.forEach((button) => activateShareButton(button));
+  }
 };
